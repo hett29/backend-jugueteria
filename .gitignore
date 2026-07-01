@@ -1,0 +1,70 @@
+# ==========================
+# Dependencias
+# ==========================
+node_modules/
+
+# ==========================
+# Variables de entorno
+# ==========================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ==========================
+# Archivos compilados
+# ==========================
+dist/
+build/
+
+# ==========================
+# Logs
+# ==========================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ==========================
+# Cobertura de pruebas
+# ==========================
+coverage/
+
+# ==========================
+# Caché
+# ==========================
+.cache/
+.esbuild/
+*.tsbuildinfo
+
+# ==========================
+# Archivos del sistema
+# ==========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==========================
+# Configuración de VS Code
+# (Opcional, si no deseas compartirla)
+# ==========================
+.vscode/
+
+# ==========================
+# JetBrains
+# ==========================
+.idea/
+
+# ==========================
+# Archivos temporales
+# ==========================
+*.tmp
+*.temp
+
+# ==========================
+# MongoDB
+# ==========================
+*.lock

@@ -1,0 +1,2 @@
+PORT=[Aqui agregar el puerto]
+MONGODB_URI=mongodb://[Agregar usuario de la bd]localhost:27017/[agregar contraseña db]
