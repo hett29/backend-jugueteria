@@ -9,6 +9,18 @@ const requireAdmin = (req: Request, res: Response, next: NextFunction) => {
   next();
 };
 
+export const listMyOrders = [
+  passport.authenticate("jwt", { session: false }),
+  async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const pedidos = await Pedido.find({ cliente: (req.user as any)._id }).sort({ createdAt: -1 });
+      return res.json({ pedidos });
+    } catch (error) {
+      return next(error);
+    }
+  },
+];
+
 export const listOrders = [
   passport.authenticate("jwt", { session: false }),
   requireAdmin,
