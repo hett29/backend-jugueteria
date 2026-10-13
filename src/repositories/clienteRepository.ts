@@ -11,6 +11,10 @@ export default class clienteRepository {
     return await Cliente.findOne({ correo }).select("+contrasena");
   }
 
+  async getAuthByCarnetOrCorreo(login: string) {
+    return await Cliente.findOne({ $or: [{ carnet: login }, { correo: login }] }).select("+contrasena");
+  }
+
   async comparePassword(
     plainPassword: string,
     hashedPassword: string

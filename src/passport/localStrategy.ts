@@ -6,14 +6,14 @@ import UsuarioResource from "../resources/clienteResource";
 
 const localStrategy = new Strategy(
   {
-    usernameField: "correo", 
+    usernameField: "carnet", 
     passwordField: "password",
     session: false,
   },
-  async (correo: string, password: string, done) => {
+  async (carnet: string, password: string, done) => {
     try {
       const repository = new UsuarioRepository();
-      const usuario = await repository.getAuthByCorreo(correo);
+      const usuario = await repository.getAuthByCarnetOrCorreo(carnet);
 
 
       if (!usuario || !usuario.contrasena) {
